@@ -6,7 +6,7 @@
 
 ## Summary
 
-This decentralized application (dApp) is composed of 2 parts
+### This decentralized application (dApp) is composed of 2 parts
   1. “Test Supplier Portal” is where Test Suppliers generate the smart QR codes
   2. “Clinician / Patient Portal” is where Clinicians and Patients use the smart QR codes.
 
