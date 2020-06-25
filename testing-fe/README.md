@@ -6,4 +6,4 @@ then run:
 - `$ npm install`
 - `$ npm start`
 
-mobile web app will be served on localhost:8080
+mobile web app will be served on localhost:8000

@@ -1,52 +1,37 @@
-# Covid-19 Portal
+# COVID-19 Test Verification and Result Tracking System
 
-## description
+## Overview
 
-Welcome to Kadena's [Covid-19 Testing Portal](https://covid19-test.chainweb.com/)!
+![overview](overview.png)
 
-This is a sister repo to our [testing dashboard](https://github.com/kadena-io/covid19-kda) and is intended for clinicians to administered verified tests to patients using our verified QR Codes generated in the [testing dashboard website](https://covid19-dashboard.chainweb.com). Patients can also use the same website to get a receipt of the test administered to them, and receive their test result in real-time directly from the blockchain!
+## Summary
 
-Adherent test kits with the corresponding QR codes can be scanned to both administer a test and post its result directly to Kadena mainnet. The purpose of the QR codes is to combat fake or duplicate tests and to anonymously record test results with non-identifying demographic info publicly on Kadena's blockchain.
+This decentralized application (dApp) is composed of 2 parts
+  1. “Test Supplier Portal” is where Test Suppliers generate the smart QR codes
+  2. “Clinician / Patient Portal” is where Clinicians and Patients use the smart QR codes.
 
-The application is scaled to use all of Kadena's 10-chain architecture and is designed to never congest the blockchain regardless of the numbers of tests that are being administered or recorded.
+## Part 1: Using the Test Supplier Portal
+  1. Go to the Test Label Dashboard, https://covid19-dashboard.chainweb.com/
+  2. Fill in the required form fields
+  3. Press “Sign” button to generate QR codes
+  4. Open downloaded folder to print and pack individual QR codes with each test kit for distribution
 
-## walkthrough
+![dashboard](dashboard.png)
 
-### prerequisites
-1. you must have a test with a valid QR code
-2. adhering manufacturers can print them [here](https://covid19-dashboard.chainweb.com/) by following [this guide](https://github.com/kadena-io/covid19-dashboard)
+## Part 2: Using the Clinician / Patient Portal
 
-### clinician
+### Clinician (while administering a COVID test)
+  1. Using a smart device, go to the Clinician / Patient Portal, https://covid19-test.chainweb.com/
+  2. Select “Clinician” button
+  3. Scan the QR code paired with the individual test kit
+  4. Fill in the form fields to record patient info, then select the “Administer Test” button
+  5. Upon success, provide the newly generated QR code to the patient. This will be their “receipt” to access their test results in the future
+  6. When the patient’s actual test result is ready, then scan the original QR code paired with the test kit for a second time
+  7. Select the patient’s test result from the form options, then select the “Post Test Result” button
 
-1. go to our testing portal [website](https://covid19-test.chainweb.com/)
-2. click 'clinician'
-3. scan the QR code on the test label
-4. enter patient information and press send
-5. let patient scan receipt of test administration
-6. (skip steps 7-9 for platform testing)
-7. administer physical test to patient
-8. patient leaves premise
-9. wait for test result to come in
-10. scan the same QR code on the administered test
-11. post test result
-12. patient anonymously receives verified test result in real-time without having to visit premise again
 
-### patient
-
-1. follow on-premise test administration process
-2. go to our testing platform [website](https://covid19-test.chainweb.com/)
-3. click 'patient'
-4. click 'scan new test'
-5. scan administration receipt QR code clinican will show you
-6. see verified test administration page
-7. wait for test result to come in realtime or press refresh
-
-## developers
-
-make sure you have node.js installed (should be version agnostic)
-
-then run:
-- `$ npm install`
-- `$ npm start`
-
-mobile web app will be served on localhost:8080
+### Patient (after taking a COVID test)
+  1. Receive QR code “receipt” from clinician in order to access test result once posted
+  2. Using a smart device, go to the Clinician / Patient Portal, https://covid19-test.chainweb.com/
+  3. Select “Patient” button, then select “Scan New Test” button
+  4. Scan the QR code provided to you to view your test results
